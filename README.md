@@ -25,3 +25,4 @@ This repository contains a Python script for implementing the Deep Dream algorit
 ## Streamlit App
 
 - The Streamlit app allows for interactive Deep Dream image generation. Upload an image, select layers, and adjust parameters using the sidebar sliders.
+- The deployed app can be accessed by clicking over [here](https://huggingface.co/spaces/unnati026/DeepDream)
