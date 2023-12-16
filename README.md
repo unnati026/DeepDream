@@ -12,7 +12,7 @@ This repository contains a Python script for implementing the Deep Dream algorit
 
 - **Dreamified Image:**
 
-    <img src="https://i.imgur.com/ncb9YuL.jpg" alt="Dreamified Image" width="100%">
+    <img src="https://i.imgur.com/qpFypMq.png" alt="Dreamified Image" width="100%">
 
 ## Customization
 
