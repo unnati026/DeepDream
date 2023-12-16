@@ -1,10 +1,6 @@
 <!DOCTYPE html>
 <html>
 
-<head>
-    <title>Deep Dream with TensorFlow and InceptionV3</title>
-</head>
-
 <body>
 
 <h1>Deep Dream with TensorFlow and InceptionV3</h1>
@@ -13,7 +9,7 @@
 
 <p>This repository contains a Python script for implementing the Deep Dream algorithm using TensorFlow and the InceptionV3 model. Deep Dream enhances patterns and features in an input image based on the neural network's recognition. Additionally, a Streamlit app is provided to interactively generate Deep Dream images.</p>
 
-<h3>Streamlit App</h3>
+<!-- <h3>Streamlit App</h3>
 
 <h2>Original and Dreamified Images</h2>
 
@@ -23,7 +19,7 @@
 
 <p><strong>Dreamified Image:</strong></p>
 
-<img src="https://i.imgur.com/ncb9YuL.jpg" alt="Dreamified Image", width=300>
+<img src="https://i.imgur.com/ncb9YuL.jpg" alt="Dreamified Image", width=300> -->
 
 <h2>Customization</h2>
 
