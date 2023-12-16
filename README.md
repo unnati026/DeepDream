@@ -1,39 +1,27 @@
-<!DOCTYPE html>
-<html>
+# Deep Dream with TensorFlow and InceptionV3
 
-<body>
+## Overview
 
-<h1>Deep Dream with TensorFlow and InceptionV3</h1>
+This repository contains a Python script for implementing the Deep Dream algorithm using TensorFlow and the InceptionV3 model. Deep Dream enhances patterns and features in an input image based on the neural network's recognition. Additionally, a Streamlit app is provided to interactively generate Deep Dream images.
 
-<h2>Overview</h2>
+## Original and Dreamified Images
 
-<p>This repository contains a Python script for implementing the Deep Dream algorithm using TensorFlow and the InceptionV3 model. Deep Dream enhances patterns and features in an input image based on the neural network's recognition. Additionally, a Streamlit app is provided to interactively generate Deep Dream images.</p>
+- **Original Image:**
+  
+    ![Original Image](https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)
 
-<!-- <h3>Streamlit App</h3>
+- **Dreamified Image:**
 
-<h2>Original and Dreamified Images</h2>
+    ![Dreamified Image](https://i.imgur.com/ncb9YuL.jpg)
 
-<p><strong>Original Image:</strong></p>
+## Customization
 
-<img src="https://images.pexels.com/photos/1933239/pexels-photo-1933239.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Original Image", width=300>
+- Adjust the `layers_contributions` list to include different layers for the deep dream algorithm.
 
-<p><strong>Dreamified Image:</strong></p>
+- Experiment with the `epochs`, `steps_per_epoch`, and `weight` parameters in the `run_gradient_ascent` function for different results.
 
-<img src="https://i.imgur.com/ncb9YuL.jpg" alt="Dreamified Image", width=300> -->
+- Try different input images for diverse deep dream effects.
 
-<h2>Customization</h2>
+## Streamlit App
 
-<ul>
-    <li>Adjust the <code>layers_contributions</code> list to include different layers for the deep dream algorithm.</li>
-
-    <li>Experiment with the <code>epochs</code>, <code>steps_per_epoch</code>, and <code>weight</code> parameters in the
-        <code>run_gradient_ascent</code> function for different results.</li>
-
-    <li>Try different input images for diverse deep dream effects.</li>
-</ul>
-
-<h2>Streamlit App</h2>
-
-<p>The Streamlit app allows for interactive Deep Dream image generation. Upload an image, select layers, and adjust parameters using the sidebar sliders.</p>
-
-<p>The deployed web app can be accessed by clicking <a href='https://huggingface.co/spaces/unnati026/DeepDream'>here</a>
+- The Streamlit app allows for interactive Deep Dream image generation. Upload an image, select layers, and adjust parameters using the sidebar sliders.
