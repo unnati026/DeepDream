@@ -7,7 +7,7 @@ from PIL import Image
 import IPython.display as display
 
 
-# Functions from your provided code
+# Required Functions
 def load_image(image_path, max_dim):
     img = Image.open(image_path)
     img = img.convert("RGB")
@@ -67,7 +67,8 @@ def get_loss_and_gradient(model, inputs, total_variation_weight=0):
     return loss, grads
 
 
-def run_gradient_ascent(model, inputs, progress_bar, epochs=1, steps_per_epoch=1, weight=0.05, total_variation_weight=0):
+def run_gradient_ascent(model, inputs, progress_bar, epochs=1, steps_per_epoch=1, weight=0.05,
+                        total_variation_weight=0):
     img = tf.convert_to_tensor(inputs)
     for i in range(epochs):
         for step in range(steps_per_epoch):
@@ -109,10 +110,12 @@ for i in range(1, 11):
 epochs = st.sidebar.slider("Epochs", 1, 5, 2, help="Number of training epochs")
 steps_per_epoch = st.sidebar.slider("Steps per Epoch", 1, 100, 50, help="Number of steps per epoch")
 weight = st.sidebar.slider("Weight", 0.01, 0.1, 0.02, step=0.01, help="Weight for gradient ascent")
+dim = st.sidebar.slider("Image Size", 128, 1024, 300,
+                        help='Choose maximum dimension of image. Higher size image will take longer to be generated.')
 
 if uploaded_file is not None:
     # Load and preprocess the uploaded image
-    input_image = load_image(uploaded_file, max_dim=250)
+    input_image = load_image(uploaded_file, max_dim=dim)
     preprocessed_image = inception_v3.preprocess_input(input_image)
 
     # Create Inception model and modify for deep dream
@@ -124,7 +127,8 @@ if uploaded_file is not None:
 
     progress_bar = st.progress(0.0)  # Initialize progress bar
     # Run gradient ascent
-    (image_array, progress_bar) = run_gradient_ascent(dream_model, preprocessed_image, progress_bar, epochs=epochs, steps_per_epoch=steps_per_epoch, weight=weight)
+    (image_array, progress_bar) = run_gradient_ascent(dream_model, preprocessed_image, progress_bar, epochs=epochs,
+                                                      steps_per_epoch=steps_per_epoch, weight=weight)
 
     # Convert numpy arrays to PIL images
     dream_pil_image = array_to_img(deprocess_inception_image(image_array))
